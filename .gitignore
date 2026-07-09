@@ -1,14 +1,30 @@
+# Dépendances
+node_modules/
+
+# Build
+dist/
+dist-ssr/
+
 # Logs
-logs
+logs/
 *.log
 npm-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
+# Variables d'environnement
+.env
+.env.local
+.env.*.local
 
-# Editor directories and files
+# Éditeurs
 .vscode/*
-.idea
+!.vscode/extensions.json
+.idea/
+*.suo
+*.sw?
+
+# OS
 .DS_Store
+Thumbs.db
+
+# Vite
+*.local
