@@ -178,8 +178,21 @@ body {
 .bar-wrap--2 .bar__val { text-align: left;  color: #2563eb; }
 
 /* ── States ── */
-.loading, .empty { text-align: center; padding: 2rem; color: #94a3b8; }
-.error           { text-align: center; padding: 2rem; color: #dc2626; }
+.empty { text-align: center; padding: 2rem; color: #94a3b8; }
+.error { text-align: center; padding: 2rem; color: #dc2626; }
+
+/* ── Skeleton ── */
+@keyframes skeleton-shimmer {
+    0%   { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+.skeleton {
+    background: linear-gradient(90deg, #e2e8f0 25%, #f8fafc 50%, #e2e8f0 75%);
+    background-size: 200% 100%;
+    animation: skeleton-shimmer 1.5s infinite;
+    border-radius: 4px;
+}
 
 /* ── Responsive ── */
 @media (max-width: 640px) {
