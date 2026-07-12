@@ -7,6 +7,7 @@ import HomeHandler from '../../application/handler';
 // --- UI
 import handleNav from '../../../shared/ui/nav/application/handler';
 import notify from '../../../shared/ui/notification/application/handler';
+import { renderHomeSkeleton } from '../../../shared/ui/skeleton/application/handler';
 
 // --- Domain
 import Sport, {SportCompetition} from '../../../sports/domain/sport';
@@ -111,7 +112,7 @@ async function init(): Promise<void> {
     const navEl = document.getElementById('nav')!;
     const appEl = document.getElementById('app')!;
 
-    appEl.innerHTML = '<p class="loading">Chargement...</p>';
+    appEl.appendChild(renderHomeSkeleton());
 
     try {
         const { sports, matches } = await handler.handle();

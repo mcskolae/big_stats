@@ -7,6 +7,7 @@ import SportPageHandler from '../../application/page/handler';
 // --- UI
 import handleNav from '../../../shared/ui/nav/application/handler';
 import notify from '../../../shared/ui/notification/application/handler';
+import { renderSportSkeleton } from '../../../shared/ui/skeleton/application/handler';
 
 // --- Tabs
 import renderStatsTab from './stats';
@@ -85,7 +86,7 @@ async function init(): Promise<void> {
     const navEl = document.getElementById('nav')!;
     const appEl = document.getElementById('app')!;
 
-    appEl.innerHTML = '<p class="loading">Chargement...</p>';
+    appEl.appendChild(renderSportSkeleton());
 
     try {
         const data = await pageHandler.handle(slug);
