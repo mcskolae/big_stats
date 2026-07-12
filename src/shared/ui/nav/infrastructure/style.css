@@ -45,3 +45,23 @@
     color: #fff;
     background: rgba(255, 255, 255, 0.12);
 }
+
+@media (max-width: 640px) {
+    .nav {
+        padding: 0 1rem;
+        gap: 1rem;
+        height: auto;
+        flex-wrap: wrap;
+        padding-block: 0.75rem;
+    }
+
+    .nav__links {
+        flex-wrap: wrap;
+        gap: 0.25rem;
+    }
+
+    .nav__link {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.8rem;
+    }
+}
