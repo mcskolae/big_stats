@@ -134,3 +134,28 @@
     color: #94a3b8;
     text-align: right;
 }
+
+@media (max-width: 640px) {
+    .sport-header {
+        padding: 1.25rem 1rem;
+    }
+
+    .sport-header__title {
+        font-size: 1.4rem;
+    }
+
+    .match-card {
+        grid-template-columns: 80px 1fr auto 1fr;
+        font-size: 0.8rem;
+    }
+
+    .match-card__venue {
+        display: none;
+    }
+
+    .standings__table th,
+    .standings__table td {
+        padding: 0.5rem 0.5rem;
+        font-size: 0.78rem;
+    }
+}
