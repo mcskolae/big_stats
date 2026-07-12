@@ -92,6 +92,7 @@ async function init(): Promise<void> {
         const { sport, allSports, athletes, matches, teams } = data;
 
         handleNav(navEl, allSports);
+        document.title = `${sport.name} — Big Stats`;
 
         appEl.innerHTML = '';
         appEl.appendChild(renderHeader(sport));
